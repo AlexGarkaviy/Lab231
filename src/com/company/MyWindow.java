@@ -6,13 +6,13 @@ package com.company;
 public class MyWindow {
     private double width;
     private double height;
-    private  int numberOfGlass;
+    private int numberOfGlass;
     private String color;
     private boolean isOpen;
 
 
     // пустой конструктор
-    public MyWindow(){
+    public MyWindow() {
     }
 
     //конструктор с одной параметрами
@@ -21,9 +21,6 @@ public class MyWindow {
 
     }
 
-
-
-
     //конструктор с двумя параметрами
     public MyWindow(double width, double height) {
         this.width = width;
@@ -31,24 +28,26 @@ public class MyWindow {
     }
 
 
-    //конструктор с тремя параметрами
+    //конструктор с тремя параметрами, изменим под задачу 2.3.4
     public MyWindow(double width, double height, int numberOfGlass) {
-        this.width = width;
+/*        this.width = width;
         this.height = height;
-        this.numberOfGlass = numberOfGlass;
+        this.numberOfGlass = numberOfGlass;*/
+        this( width,  height,  numberOfGlass, null);
     }
 
 
-    //конструктор с четыремя параметрами
+    //конструктор с четыремя параметрами, изменим под задачу 2.3.4
     public MyWindow(double width, double height, int numberOfGlass, String color) {
-        this.width = width;
+/*        this.width = width;
         this.height = height;
         this.numberOfGlass = numberOfGlass;
-        this.color = color;
+        this.color = color;*/
+        this( width,  height,  numberOfGlass, color,false);
     }
 
 
-    //конструктор с пятиремя параметрами
+    //Изначальный конструктор с пятью параметрами
     public MyWindow(double width, double height, int numberOfGlass, String color, boolean isOpen) {
         this.width = width;
         this.height = height;
@@ -67,9 +66,10 @@ public class MyWindow {
     // 243
 
     public void printFields() {
-        System.out.println("Поля класса - "+"длина "+width+" ширина "+height+" кол-во стекол "+numberOfGlass+" цвет "+color+" открыто "+isOpen);
+        System.out.println("Поля класса - " + "длина " + width + " ширина " + height + " кол-во стекол " + numberOfGlass + " цвет " + color + " открыто " + isOpen);
 
     }
+
 
     public double getWidth() {
         return width;
@@ -110,7 +110,6 @@ public class MyWindow {
     public void setOpen(boolean open) {
         isOpen = open;
     }
-
 
 
 }
